@@ -36,5 +36,29 @@
   },
   "dependencies": {
     "time-grunt": "*"
+  },
+  "preload":{
+    "tpl":[
+      {
+        "version":"0.0.1",
+        "src":"src/tpl/home/index.html"
+      },
+      {
+        "version":"0.0.1",
+        "src":"src/tpl/home/community.html"
+      },
+      {
+        "version":"0.0.1",
+        "src":"src/tpl/home/manual.html"
+      },
+      {
+        "version":"0.0.1",
+        "src":"src/tpl/home/news.html"
+      },
+      {
+        "version":"0.0.1",
+        "src":"src/tpl/home/toolbox.html"
+      }
+    ]
   }
 }
