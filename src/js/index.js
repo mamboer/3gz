@@ -2,9 +2,8 @@ define([
         'routers/router',
         'utils/preload',
         'utils/juice',
-        'controllers/splash',
-        'controllers/home'
-], (function(router, preload,juice,splash,home){
+        'controllers/splash'
+], (function(router, preload,juice,splash){
 
     var mod = {
         bindEvents : function() {
@@ -59,7 +58,7 @@ define([
 
                     setTimeout(function(){
                         splash.hide();
-                        home.init();
+                        router.navigate(location.href);
                     },mod.appData.splashDelay);
 
                 });

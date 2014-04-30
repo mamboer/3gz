@@ -12,7 +12,7 @@ define([
             this.cbk&&this.cbk();
         },
         onProgress:function(e){
-            var t = Math.round(e.progress * 100 * .8);
+            var t = Math.round(e.progress * 100 * .999);
             if (t == 0) t = 1;
             this.$progress.css({
                 width: t + "%"

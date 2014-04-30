@@ -329,7 +329,7 @@
 
     swapContent(
       (activeObj.contents || activeDom).cloneNode(true),
-      document.querySelector('.content'),
+      (transition?document.querySelector('.content'):document.body),
       transition
     );
 
@@ -613,7 +613,7 @@
   // ==========================
 
   window.addEventListener('touchstart', function () { isScrolling = false; });
-  window.addEventListener('touchmove', function () { isScrolling = true; });
+  //window.addEventListener('touchmove', function () { isScrolling = true; });
   window.addEventListener('touchend', touchend);
   window.addEventListener('click', function (e) { if (getTarget(e)) {e.preventDefault();} });
   window.addEventListener('popstate', popstate);

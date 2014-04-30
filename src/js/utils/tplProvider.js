@@ -16,6 +16,7 @@ define([
         },
         getCacheKey:function(tplUrl){
             var flag = 'tpl/';
+            tplUrl = tplUrl.indexOf(flag)===-1?(flag+tplUrl):tplUrl;
             flag = C.codeName+'.'+tplUrl.replace('.html','').substr(tplUrl.indexOf(flag)).replace(/\//gi,'-');
             return flag;
         }
