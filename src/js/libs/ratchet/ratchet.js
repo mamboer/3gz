@@ -632,7 +632,7 @@
   // ==========================
 
   window.addEventListener('touchstart', function () { isScrolling = false; });
-  //window.addEventListener('touchmove', function () { isScrolling = true; });
+  window.addEventListener('touchmove', function () { isScrolling = true; });
   window.addEventListener('touchend', touchend);
   window.addEventListener('click', function (e) { if (getTarget(e)) {e.preventDefault();} });
   window.addEventListener('popstate', popstate);
