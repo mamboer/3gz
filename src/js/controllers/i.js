@@ -8,6 +8,13 @@ define([
         //action index
         index:function(opts){
             this.basic(opts);
+        },
+        events:{
+            'click':'#btnNoCache clearCache'
+        },
+        clearCache:function(){
+            localStorage.clear();
+            alert('Done clearing cache!');
         }
     };
 

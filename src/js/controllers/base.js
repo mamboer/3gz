@@ -55,8 +55,21 @@ define([
             });
         },
         init:function(opts){
-            var action = this[opts.action]||this.basic;
+            var action = this[opts.action]||this.basic,
+                $doc = $(document),
+                evtPair = null,
+                me = this;
+
             action.call(this,opts);
+
+            if(this.events){
+                for(var c in this.events){
+                    evtPair = this.events[c].split(' ');
+                    $doc.on(c,evtPair[0],function(e){
+                        me[evtPair[1]].call(me,e);
+                    });
+                };
+            };
         },
         //basic action
         basic:function(opts,data){
