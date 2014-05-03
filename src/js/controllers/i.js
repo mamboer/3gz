@@ -15,6 +15,7 @@ define([
         clearCache:function(){
             localStorage.clear();
             alert('Done clearing cache!');
+            location.reload();
         }
     };
 
