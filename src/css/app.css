@@ -20,6 +20,9 @@
 .content-padded img{
     max-width: 100%;
 }
+.modal .bar{
+    z-index: 11;
+}
 
 .g3c_txt1{
     color:#999;
