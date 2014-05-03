@@ -4,7 +4,7 @@ define([
 ],(function(C,B64){
 
    var mod = {
-        url:C.remoteUrl+'src/tpl/shared/splash.html',
+        url:C.remoteUrl()+'src/tpl/shared/splash.html',
         cacheKey:C.codeName+'.tpl-shared-splash',
         init:function(cbk){
             var localObj = localStorage[mod.cacheKey],

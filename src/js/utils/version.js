@@ -1,6 +1,6 @@
 define(['utils/base64','utils/consts'],function(B64,C){
 
-    var remoteUrl = C.remoteUrl+'package.json',
+    var remoteUrl = C.remoteUrl()+'package.json',
         cacheKey = C.codeName+'.package';
 
     var request = function(cbk){

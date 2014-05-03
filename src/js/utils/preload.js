@@ -90,7 +90,7 @@ define([
                 };
 
                 if(!tpl2){
-                    tpl1.src = C.remoteUrl+tpl1.src;
+                    tpl1.src = C.remoteUrl()+tpl1.src;
                     tpls.push(tpl1);
                 }
             };
