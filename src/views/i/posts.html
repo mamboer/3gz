@@ -8,15 +8,23 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <link rel="stylesheet" href="css/ratchet.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <script src="js/ratchet.js"></script>
+    <link rel="stylesheet" href="../../css/ratchet.css" />
+    <link rel="stylesheet" href="../../css/app.css" />
+
+    <!-- scripts -->
+    <script src="../../js/libs/ratchet/ratchet.js"></script>
+    <script src="../../js/libs/zepto/zepto.js"></script>
+    <script src="../../js/libs/PreloadJS/preloadjs-0.4.1.combined.js"></script>
+    <script src="../../js/libs/hogan/hogan-2.0.0.js"></script>
+    <script src="../../js/utils/detect.js"></script>
+    <script data-main="../../js/main" src="../../js/libs/require/require.js"></script>
+    <!-- /scripts -->
 
 </head>
 
 <body>
     <header class="bar bar-nav">
-      <a class="btn btn-link btn-nav pull-left" href="i.html" data-transition="slide-out">
+      <a class="btn btn-link btn-nav pull-left" href="index.html" data-transition="slide-out">
         <span class="icon icon-left-nav"></span>
         返回
       </a>
@@ -24,50 +32,28 @@
     </header>
 
     <nav class="bar bar-tab">
-        <a class="tab-item" href="index.html">
+        <a class="tab-item" href="../home/index.html">
             <span class="icon icon-home"></span>
             <span class="tab-label">首页</span>
         </a>
-        <a class="tab-item" href="home/manual.html">
+        <a class="tab-item" href="../home/manual.html">
             <span class="icon iconfont icon-wangyou"></span>
             <span class="tab-label">攻略</span>
         </a>
-        <a class="tab-item" href="home/community.html">
+        <a class="tab-item" href="../home/community.html">
             <span class="icon iconfont icon-duihua"></span>
             <span class="tab-label">社区</span>
         </a>
-        <a class="tab-item" href="home/toolbox.html">
+        <a class="tab-item" href="../home/toolbox.html">
             <span class="icon iconfont icon-yingyong"></span>
             <span class="tab-label">百宝箱</span>
         </a>
-        <a class="tab-item active" href="i/index.html">
+        <a class="tab-item active" href="index.html">
             <span class="icon icon-person"></span>
             <span class="tab-label">个人中心</span>
         </a>
     </nav>
-
-    <div class="content">
-
-        <h5 class="content-padded">最新消息</h5>
-
-        <div class="content-padded">
-            <h6>消息标题</h6>
-            <p>消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla</p>
-        </div>
-
-        <div class="content-padded">
-            <h6>消息标题</h6>
-            <p>消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla</p>
-        </div>
-
-        <div class="content-padded">
-            <h6>消息标题</h6>
-            <p>消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla消息内容balabla</p>
-        </div>
-        
-    </div>
-    <!-- /.content -->
-
+    <div class="content"></div>
 </body>
 
 </html>

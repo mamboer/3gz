@@ -51,7 +51,7 @@ define([
 
             splash.init(function(err,newHtml,oldHtml){
                 if(!err && newHtml){
-                    document.body.innerHTML = newHtml;
+                    document.body.innerHTML += newHtml;
                 }
                 //preload resources
                 preload.init(function(err){

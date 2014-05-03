@@ -1,6 +1,6 @@
 {
   "name": "TGIAPP-CBLW",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "tgi",
     "webapp",
@@ -58,6 +58,22 @@
       {
         "version":"0.0.1",
         "src":"src/tpl/home/toolbox.html"
+      },
+      {
+        "version":"0.0.1",
+        "src":"src/tpl/i/index.html"
+      },
+      {
+        "version":"0.0.1",
+        "src":"src/tpl/i/msg.html"
+      },
+      {
+        "version":"0.0.1",
+        "src":"src/tpl/i/posts.html"
+      },
+      {
+        "version":"0.0.1",
+        "src":"src/tpl/i/setting.html"
       }
     ]
   }

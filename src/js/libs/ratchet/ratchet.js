@@ -162,8 +162,8 @@
   var cacheMapping   = sessionStorage;
   var domCache       = {};
   var transitionMap  = {
-    slideIn  : 'slide-out',
-    slideOut : 'slide-in',
+    'slide-in'  : 'slide-out',
+    'slide-out' : 'slide-in',
     fade     : 'fade'
   };
 
@@ -250,6 +250,11 @@
     var target = getTarget(e);
 
     if (!target) {
+      return;
+    }
+
+    if ( target.getAttribute('data-back') && PUSH.id ){
+      history.back();
       return;
     }
 
@@ -596,7 +601,7 @@
     }
 
     data.title = head.querySelector('title');
-    var text = 'innerText' in data.title ? 'innerText' : 'textContent';
+    var text = data.title ? ('innerText' in data.title ? 'innerText' : 'textContent'):null;
     data.title = data.title && data.title[text].trim();
 
     if (options.transition) {
@@ -607,6 +612,20 @@
 
     return data;
   };
+
+  // Public methods
+  
+  PUSH.updateDomCache = function(pushId){
+    domCache[pushId] = document.body.cloneNode(true);
+  };
+
+  PUSH.getDomCache = function(pushId){
+    return domCache[pushId];
+  };
+
+  PUSH.bars = bars;
+
+  PUSH.parseXHR = parseXHR;
 
 
   // Attach PUSH event handlers

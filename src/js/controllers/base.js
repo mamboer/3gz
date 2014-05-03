@@ -1,6 +1,8 @@
 define([
-    'utils/consts'
-],function(C){
+    'utils/consts',
+    'views/base',
+    'utils/tplProvider'
+],function(C,V,tplProvider){
     var mod = {
         /**
          * 根据视图url获取对应的控制器路径。
@@ -51,6 +53,25 @@ define([
             require([ctr.controllerUrl],function(CTR){
                 CTR.init(opts);
             });
+        },
+        init:function(opts){
+            var action = this[opts.action]||this.basic;
+            action.call(this,opts);
+        },
+        //basic action
+        basic:function(opts,data){
+            var tpl = tplProvider.getByUrl(opts.actionUrl),
+                target = null;//set target to null,let our view engine parse the html automatically
+
+            V.renderTo(target,{
+                tpl:tpl,
+                tplData:data||{},
+                triggerEvent:true,
+                eventData:opts
+            });
+        },
+        merge:function(controllerInstance){
+            return $.extend(this,controllerInstance||{});
         }
     };
 

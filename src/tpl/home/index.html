@@ -1,51 +1,23 @@
+<!--因为本页面的modal里面也有一个bar-nav，为了防止push.js解析错误，这个bar-nav是必须的-->
 <header class="bar bar-nav">
     <a class="icon iconfont icon-erweima pull-left"></a>
     <a class="icon iconfont icon-liebiao pull-right" href="#asideModal"></a>
-    <a class="icon icon-search pull-right"></a>
+    <!--<a class="icon icon-search pull-right"></a>-->
     <h1 class="title">赤壁乱舞</h1>
 </header>
-
-<div class="bar bar-standard bar-header-secondary">
-    <form>
-        <input type="search" placeholder="请输入搜索关键字"/>
-    </form>
-</div>
-
-<nav class="bar bar-tab">
-    <a class="tab-item active" href="index.html">
-        <span class="icon icon-home"></span>
-        <span class="tab-label">首页</span>
-    </a>
-    <a class="tab-item" href="manual.html">
-        <span class="icon iconfont icon-wangyou"></span>
-        <span class="tab-label">攻略</span>
-    </a>
-    <a class="tab-item" href="comunity.html">
-        <span class="icon iconfont icon-duihua"></span>
-        <span class="tab-label">社区</span>
-    </a>
-    <a class="tab-item" href="toolbox.html">
-        <span class="icon iconfont icon-yingyong"></span>
-        <span class="tab-label">百宝箱</span>
-    </a>
-    <a class="tab-item" href="../i/index.html">
-        <span class="icon icon-person"></span>
-        <span class="tab-label">个人中心</span>
-    </a>
-</nav>
 
 <div class="content">
 
     <div class="slider">
         <div class="slide-group">
             <div class="slide">
-                <img src="../../img/argo.png" alt="Argo" width="640" height="300"/>
+                <img src="../../img/1.jpg" alt="1"/>
             </div>
             <div class="slide">
-                <img src="../../img/skyfall.png" alt="Skyfall" width="640" height="300"/>
+                <img src="../../img/2.jpg" alt="2"/>
             </div>
             <div class="slide">
-                <img src="../../img/ralph.png" alt="Wreck-It Ralph" width="640" height="300"/>
+                <img src="../../img/3.jpg" alt="3"/>
             </div>
         </div>
     </div>
@@ -134,20 +106,21 @@
             </a>
         </li>
     </ul>
+
+    <!-- aside modal -->
+    <div id="asideModal" class="modal">
+        <header class="bar bar-nav" data-ignore="">
+            <a class="icon icon-close pull-right" href="#asideModal"></a>
+            <h1 class="title">浮层XXXX</h1>
+        </header>
+
+        <div class="content">
+            
+            <h5 class="content-padded">TODO....</h5>
+
+        </div>
+    </div>
+    <!-- /.modal -->
+
 </div>
 <!-- /.content -->
-
-<!-- aside modal -->
-<div id="asideModal" class="modal">
-    <header class="bar bar-nav">
-        <a class="icon icon-close pull-right" href="#asideModal"></a>
-        <h1 class="title">浮层XXXX</h1>
-    </header>
-
-    <div class="content">
-        
-        <h5 class="content-padded">TODO....</h5>
-
-    </div>
-</div>
-<!-- /.modal -->
