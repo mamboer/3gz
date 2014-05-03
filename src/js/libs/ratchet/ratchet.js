@@ -575,6 +575,8 @@
 
     result.contents = dom.querySelector(fragment);
 
+    result.modals = dom.querySelectorAll('.modal');
+
     return result;
   };
 

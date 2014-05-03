@@ -44,11 +44,17 @@ define(function(){
                       var el = dom.querySelector(bars[key]);
                       if ( el && result[key] ) {
                           el.innerHTML = result[key].innerHTML;
+                          html = html.replace(el.innerHTML,'');
                       }
                     });
 
                     //update contents
                     result.contents && ( con.innerHTML = result.contents.innerHTML );
+
+                    //modals
+                    $.each(result.modals||[],function(i,o){
+                        dom.appendChild(o);
+                    });
 
                 }
             };
